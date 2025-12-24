@@ -72,7 +72,7 @@ The DUT is a **Single Port Synchronous RAM** with the following characteristics:
 | Parameter | Value |
 |-----------|-------|
 | Memory Type | Single Port RAM |
-| Data Width | 16 bits |
+| Data Width | 32 bits |
 | Address Width | 4 bits |
 | Memory Depth | 16 locations (0x0 to 0xF) |
 | Clock | Synchronous (positive edge) |
@@ -85,8 +85,8 @@ interface ram_if(input bit clk);
     logic        rst;       // Reset signal
     logic        we;        // Write enable
     logic [3:0]  addr;      // Address input
-    logic [15:0] data_in;   // Write data
-    logic [15:0] data_out;  // Read data
+    logic [31:0] data_in;   // Write data
+    logic [31:0] data_out;  // Read data
 endinterface
 ```
 
